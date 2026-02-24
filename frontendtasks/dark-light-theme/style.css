@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.light {
+  background: rgb(255, 241, 241);
+  color: black;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
