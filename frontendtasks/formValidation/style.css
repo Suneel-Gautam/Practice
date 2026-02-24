@@ -1,0 +1,21 @@
+.neutral {
+  color: black;
+}
+
+.username {
+  border: solid black 2px;
+}
+.usernameError {
+  border: solid red 2px;
+}
+.usernameSuccess {
+  border: solid greenyellow 2px;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: rgb(0, 255, 4);
+}
