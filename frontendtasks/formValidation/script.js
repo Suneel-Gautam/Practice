@@ -4,7 +4,9 @@ const submitButton = document.getElementById("submitBtn");
 const username = document.getElementById("username");
 const message = document.getElementById("message");
 
-submitButton.addEventListener("click", () => {
+// submitButton.addEventListener("click", () => {
+
+username.addEventListener("input", () => {
   const isValid = username.value.length >= 5;
 
   if (isValid) {
