@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizz</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- start screen -->
+    <div class="start-screen container hide" id="start-screen">
+      <h1>Quizz time</h1>
+      <span>Test Your knowledge</span>
+      <button id="start-quizz" class="button">Start</button>
+    </div>
+
+    <!-- Quizz-Container -->
+    <div class="Quizz-Container container Show" id="Quizz-Container">
+      <div>
+        <span id="question" class="question">Your Question goes here</span>
+
+        <div class="optionBox" id="optionBox"></div>
+
+        <button id="nextButton" class="nextButton">Next</button>
+
+        <div id="answer" class="answer"></div>
+      </div>
+    </div>
+
+    <!-- result screen -->
+    <div class="Quizz-result container hide" id="Quizz-result"></div>
+  </body>
+</html>

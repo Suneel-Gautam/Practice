@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgb(255, 238, 217);
+  padding: 40px;
+  margin-top: 60px;
+  border-radius: 16px;
+  width: 500px;
+}
+.hide {
+  display: none;
+}
+.show {
+  display: flex;
+}
+
+.start-screen {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+
+.start-screen span {
+  font-size: 16px;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.start-screen h1 {
+  font-size: 26px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.start-screen .button {
+  padding: 10px 40px;
+  background-color: rgb(241, 8, 8);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+.start-screen .button:hover {
+  background-color: rgb(255, 73, 73);
+}
+
+.Quizz-Container .question {
+  font-size: 24px;
+}
+
+.optionBox {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.option {
+  border: solid black 1px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: rgb(205, 221, 235);
+}
+
+.optionCorrect {
+  background-color: green;
+  border: solid green 1px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.optionIncorrect {
+  background-color: red;
+  border: solid red 1px;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.nextButton {
+  margin-top: 40px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  outline: none;
+  background-color: red;
+  color: white;
+  border: none;
+}
+.nextButton:hover {
+  background-color: rgb(243, 109, 109);
+}
+
+.Quizz-result {
+}
