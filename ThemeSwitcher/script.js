@@ -38,24 +38,46 @@ function showError(input, message) {
   error.innerText = message;
 }
 
+function formValidation(input) {
+  if (input.value.trim() === "") {
+    showError(input, "cant be the empty feild");
+    return false;
+  } else {
+    showError(input, "");
+    return true;
+  }
+}
+
 inputs.forEach((input, index) => {
   input.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
       event.preventDefault();
 
-      input[index + 1].focus();
+      const valid = formValidation(input);
+
+      if (valid) {
+        if (index < inputs.length - 1) {
+          inputs[index + 1].focus();
+        }
+      }
     }
+  });
+  input.addEventListener("input", () => {
+    showError(input, "");
   });
 });
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
-  if (userName.value === "") {
-    showError(userName, "Please Enter Username");
-  } else {
-    showError(userName, "");
+
+  let allValid = true;
+  inputs.forEach((input) => {
+    if (!formValidation(input)) {
+      allValid = false;
+    }
+  });
+
+  if (allValid) {
+    alert("form submitted");
   }
-});
-userName.addEventListener("input", () => {
-  showError(userName, "");
 });
