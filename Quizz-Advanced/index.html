@@ -9,17 +9,52 @@
   </head>
   <body>
     <div class="main">
-      <div class="questionSection" id="Question Question">
-        <span class="question"
-          >Which is the highest mountain in the world?</span
-        >
+      <div class="addQuestion">
+        <button class="Addquestion">Add question</button>
+      </div>
+
+      <!-- welcome section  -->
+      <div class="container display hide" id="Start-quizz">
+        <span class="header"> Welcome to Quizz section </span>
+        <button class="nextBtn">Start Quizz</button>
+      </div>
+      <!-- question section -->
+      <div class="questionSection hide" id="Question-Section">
+        <span class="header">1.</span>
+        <span class="header">Which is the highest mountain in the world?</span>
 
         <ul class="optionList">
-          <li>Mount Everest</li>
-          <li>K2</li>
-          <li>Kangchenjunga</li>
-          <li>Lhotse</li>
+          <li class="clicked">Mount Everest</li>
+          <li class="default">K2</li>
+          <li class="default">Kangchenjunga</li>
+          <li class="default">Lhotse</li>
         </ul>
+
+        <div class="btns">
+          <button class="nextBtn" id="next-btn">Next</button>
+        </div>
+      </div>
+
+      <!-- result section  -->
+      <div class="container hide" id="Result-Section">
+        <span class="header"> Result of Your quizz </span>
+      </div>
+
+      <!-- add question Section -->
+
+      <div class="QuestionAddContainer">
+        <span>Add Questions</span>
+
+        <form action="" class="question-form">
+          <div class="inputBox" id="input-box">
+            <label for="Question">Question</label>
+            <input type="text" name="question" id="question" />
+          </div>
+          <div>
+            <label for="option">Options</label>
+            <input type="text" name="option" id="option1" />
+          </div>
+        </form>
       </div>
     </div>
   </body>

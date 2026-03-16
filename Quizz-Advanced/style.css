@@ -8,6 +8,27 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+.display {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+.addQuestion {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.Addquestion {
+  background: #fff9f9;
+  border-radius: 2px;
+  cursor: pointer;
+  background: #000;
+  color: white;
+  padding: 6px;
+  border: none;
+}
 .main {
   background-color: cornsilk;
   height: 100vh;
@@ -16,16 +37,31 @@ body {
   align-items: center;
 }
 
-.questionSection {
-  background-color: rgb(255, 249, 90);
+.container {
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  justify-content: center;
+  background-color: rgb(61, 74, 9);
   padding: 50px;
   border-radius: 20px;
-  width: 50%;
-  height: 50%;
+  max-width: 50%;
+  max-height: 50%;
 }
-.question {
+
+.questionSection {
+  background-color: rgb(61, 74, 9);
+  justify-content: center;
+  padding: 50px;
+  border-radius: 20px;
+  min-width: 50%;
+  min-height: 50%;
+}
+
+.header {
   font-size: 20px;
   font-weight: bold;
+  color: white;
 }
 
 .optionList {
@@ -39,9 +75,85 @@ body {
 }
 
 .optionList li {
-  background-color: rgb(252, 250, 247);
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  width: 90%;
+}
+.optionList li:hover {
+  background: #e4e3e3;
+}
+
+.default {
+  background-color: #e4e3e3;
+}
+
+.clicked {
+  background-color: #135d74;
+  color: rgb(255, 255, 255);
+}
+.btns {
+  margin-top: 50px;
+  width: 95%;
+  display: flex;
+  justify-content: end;
+}
+.nextBtn {
+  background: #ff0404;
+  padding: 14px 38px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nextBtn:hover {
+  background-color: #901717;
+}
+
+.QuestionAddContainer {
+  background-color: rgb(243, 249, 231);
+  border: 1px solid rgb(235, 215, 215);
+  border-radius: 8px;
+  height: 70%;
+  width: 70%;
+  padding: 20px;
+}
+
+.QuestionAddContainer span {
+  font-weight: bold;
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.question-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 18px;
+  gap: 10px;
+  margin-top: 40px;
+  justify-items: center;
+  align-items: start;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+  gap: 6px;
+  width: 100%;
+}
+
+.inputBox input {
+  padding: 14px 10px;
+  border-radius: 6px;
+  border-color: #ea2828;
   width: 80%;
 }
+
+.inputBox label{
+  font-size: 18px;
+}
+
