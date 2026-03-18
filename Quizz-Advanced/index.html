@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer> </script>
   </head>
   <body>
     <div class="main">
-      <div class="addQuestion">
+      <div class="addQuestion hide">
         <button class="Addquestion">Add question</button>
       </div>
 
@@ -19,11 +19,12 @@
         <button class="nextBtn">Start Quizz</button>
       </div>
       <!-- question section -->
-      <div class="questionSection hide" id="Question-Section">
-        <span class="header">1.</span>
-        <span class="header">Which is the highest mountain in the world?</span>
+      <div class="questionSection" id="Question-Section">
+        <span class="header" id="Question-title">
+          </span
+        >
 
-        <ul class="optionList">
+        <ul class="optionList" id="option-list">
           <li class="clicked">Mount Everest</li>
           <li class="default">K2</li>
           <li class="default">Kangchenjunga</li>
@@ -42,7 +43,7 @@
 
       <!-- add question Section -->
 
-      <div class="QuestionAddContainer">
+      <div class="QuestionAddContainer hide">
         <span>Add Questions</span>
 
         <form action="" class="question-form">
