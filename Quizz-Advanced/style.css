@@ -80,12 +80,14 @@ body {
   cursor: pointer;
   width: 90%;
 }
-.optionList li:hover {
-  background: #e4e3e3;
-}
+
 
 .default {
   background-color: #e4e3e3;
+}
+
+.default:hover {
+  background-color: #cdbaba;
 }
 
 .clicked {

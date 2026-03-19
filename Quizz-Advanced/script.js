@@ -121,6 +121,12 @@ function loadQuestion() {
   questionTitle.innerText = questionList[index].question;
 
   let option = questionList[index].options;
+
+  optionsListSection.innerHTML = "";
+
+  option.forEach((element) => {
+    optionsListSection.innerHTML += `<li class="default">${element}</li>`;
+  });
 }
 
 loadQuestion();
