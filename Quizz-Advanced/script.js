@@ -129,4 +129,8 @@ function loadQuestion() {
   });
 }
 
+function checkAnswer() {
+
+}
+
 loadQuestion();
