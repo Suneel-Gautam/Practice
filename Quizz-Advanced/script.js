@@ -7,94 +7,14 @@ const questionList = [
     answer: "Kathmandu",
   },
   {
-    question: "Who is known as the Father of the Nation in India?",
+    question: "Which is the largest desert in the world?",
     options: [
-      "Jawaharlal Nehru",
-      "Mahatma Gandhi",
-      "Subhas Chandra Bose",
-      "B. R. Ambedkar",
+      "Sahara Desert",
+      "Gobi Desert",
+      "Arctic Desert",
+      "Antarctic Desert",
     ],
-    answer: "Mahatma Gandhi",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: ["Earth", "Mars", "Jupiter", "Venus"],
-    answer: "Mars",
-  },
-  {
-    question: "What is the largest ocean in the world?",
-    options: [
-      "Atlantic Ocean",
-      "Indian Ocean",
-      "Pacific Ocean",
-      "Arctic Ocean",
-    ],
-    answer: "Pacific Ocean",
-  },
-  {
-    question: "Who wrote 'Romeo and Juliet'?",
-    options: [
-      "William Shakespeare",
-      "Charles Dickens",
-      "Mark Twain",
-      "Jane Austen",
-    ],
-    answer: "William Shakespeare",
-  },
-  {
-    question: "What is the currency of Japan?",
-    options: ["Won", "Dollar", "Yen", "Euro"],
-    answer: "Yen",
-  },
-  {
-    question: "Which is the tallest mountain in the world?",
-    options: ["K2", "Mount Everest", "Kangchenjunga", "Lhotse"],
-    answer: "Mount Everest",
-  },
-  {
-    question: "Which gas do plants absorb from the atmosphere?",
-    options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Hydrogen"],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "Who was the first President of the United States?",
-    options: [
-      "Abraham Lincoln",
-      "George Washington",
-      "Thomas Jefferson",
-      "John Adams",
-    ],
-    answer: "George Washington",
-  },
-  {
-    question: "Which country is known as the Land of the Rising Sun?",
-    options: ["China", "Japan", "Thailand", "South Korea"],
-    answer: "Japan",
-  },
-  {
-    question: "What is the smallest continent?",
-    options: ["Europe", "Australia", "Antarctica", "South America"],
-    answer: "Australia",
-  },
-  {
-    question: "Which river is the longest in the world?",
-    options: ["Amazon", "Nile", "Ganges", "Yangtze"],
-    answer: "Nile",
-  },
-  {
-    question: "Which element has the chemical symbol 'O'?",
-    options: ["Gold", "Oxygen", "Silver", "Iron"],
-    answer: "Oxygen",
-  },
-  {
-    question: "Who discovered gravity?",
-    options: [
-      "Albert Einstein",
-      "Isaac Newton",
-      "Galileo Galilei",
-      "Nikola Tesla",
-    ],
-    answer: "Isaac Newton",
+    answer: "Antarctic Desert",
   },
   {
     question: "Which is the largest desert in the world?",
@@ -106,10 +26,67 @@ const questionList = [
     ],
     answer: "Antarctic Desert",
   },
+  {
+    question: "Which is the largest desert in the world?",
+    options: [
+      "Sahara Desert",
+      "Gobi Desert",
+      "Arctic Desert",
+      "Antarctic Desert",
+    ],
+    answer: "Antarctic Desert",
+  }
 ];
 
+/// flow of the app 
+
+let isStarted = localStorage.getItem('isStarted') === "true"
+console.log(isStarted)
+
+
+const addQuestionButton = document.getElementById('Add-Questions');
+
+
+const startQuizzContainer = document.getElementById('Start-quizz');
+const questionSectionContainer = document.getElementById("Question-Section");
+const resultContainer = document.getElementById('Result-Section')
+const questionContainer = document.getElementById('Question-Container')
+
+
+// add quizzz 
+
+addQuestionButton.addEventListener('click', () => {
+  questionContainer.classList.remove('hide')
+  startQuizzContainer.classList.add('hide')
+})
+
+
+
+
+
+/// starting quizz
+const startQuizz = document.getElementById('start-quizz')
+
+if (isStarted) {
+  questionSectionContainer.classList.remove('hide')
+  startQuizzContainer.classList.add('hide')
+  addQuestionButton.classList.add('hide')
+}
+
+
+startQuizz.addEventListener('click', () => {
+  localStorage.setItem('isStarted', true)
+
+  questionSectionContainer.classList.remove('hide')
+  startQuizzContainer.classList.add('hide')
+  addQuestionButton.classList.add('hide')
+
+
+})
+
+
+/// load questions 
 const startSection = document.getElementById("Start-quizz");
-const questionSection = document.getElementById("Question-Section");
 const resultSection = document.getElementById("Result-Section");
 const questionTitle = document.getElementById("Question-title");
 const optionsListSection = document.getElementById("option-list");
@@ -119,7 +96,7 @@ let index = 0;
 let ans;
 
 function loadQuestion() {
-  questionTitle.innerText = questionList[index].question;
+  questionTitle.innerText = `${index + 1}. ${questionList[index].question}`
 
   let option = questionList[index].options;
 
@@ -146,8 +123,6 @@ function loadQuestion() {
   })
 }
 
-
-
 function checkAnswer(SelectedAnswer) {
   let correctAnswer = questionList[index].answer
 
@@ -155,11 +130,31 @@ function checkAnswer(SelectedAnswer) {
 
   }
 
-
-
 }
 
+nextbutton.addEventListener('click', () => {
+  if (index < questionList.length - 1) {
+    index++
+    loadQuestion();
+    if (index === questionList.length - 1) {
+      nextbutton.innerText = "Submit"
+    }
+  } else {
+    questionSectionContainer.classList.add("hide")
+    resultContainer.classList.remove('hide')
+    localStorage.setItem('isStarted', false)
 
 
+  }
+
+
+})
 
 loadQuestion();
+
+
+
+// add questions 
+
+
+

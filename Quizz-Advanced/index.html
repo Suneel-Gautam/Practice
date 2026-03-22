@@ -9,22 +9,20 @@
   </head>
   <body>
     <div class="main">
-      <div class="addQuestion hide">
-        <button class="Addquestion">Add question</button>
+      <div class="addQuestion" id="Add-Questions">
+        <button class="Addquestion" >Add question</button>
       </div>
 
       <!-- welcome section  -->
-      <div class="container display hide" id="Start-quizz">
+      <div class="container display" id="Start-quizz">
         <span class="header"> Welcome to Quizz section </span>
-        <button class="nextBtn">Start Quizz</button>
+        <button class="nextBtn" id="start-quizz">Start Quizz</button>
       </div>
       <!-- question section -->
-      <div class="questionSection" id="Question-Section">
+      <div class="questionSection hide" id="Question-Section">
         <span class="header" id="Question-title"> </span>
 
-        <ul class="optionList" id="option-list">
-          
-        </ul>
+        <ul class="optionList" id="option-list"></ul>
 
         <div class="btns">
           <button class="nextBtn" id="next-btn">Next</button>
@@ -38,7 +36,7 @@
 
       <!-- add question Section -->
 
-      <div class="QuestionAddContainer hide">
+      <div class="QuestionAddContainer hide" id="Question-Container">
         <span>Add Questions</span>
 
         <form action="" class="question-form">
