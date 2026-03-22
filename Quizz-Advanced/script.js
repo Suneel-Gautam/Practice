@@ -116,6 +116,7 @@ const optionsListSection = document.getElementById("option-list");
 const nextbutton = document.getElementById("next-btn");
 
 let index = 0;
+let ans;
 
 function loadQuestion() {
   questionTitle.innerText = questionList[index].question;
@@ -127,10 +128,38 @@ function loadQuestion() {
   option.forEach((element) => {
     optionsListSection.innerHTML += `<li class="default">${element}</li>`;
   });
+
+  const optionList = document.querySelectorAll('#option-list li')
+
+  optionList.forEach((opt) => {
+    opt.addEventListener('click', () => {
+
+      optionList.forEach((opt) => {
+        opt.classList.remove('clicked')
+        opt.classList.add('default')
+      })
+
+      ans = opt.innerHTML
+      opt.classList.add('clicked')
+      opt.classList.remove('default')
+    })
+  })
 }
 
-function checkAnswer() {
+
+
+function checkAnswer(SelectedAnswer) {
+  let correctAnswer = questionList[index].answer
+
+  if (correctAnswer === SelectedAnswer) {
+
+  }
+
+
 
 }
+
+
+
 
 loadQuestion();
