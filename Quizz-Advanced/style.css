@@ -1,11 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 * {
-  margin: 0; 
+  margin: 0;
   padding: 0;
 }
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .display {
@@ -81,7 +88,6 @@ body {
   width: 90%;
 }
 
-
 .default {
   background-color: #e4e3e3;
 }
@@ -119,7 +125,7 @@ body {
   background-color: rgb(243, 249, 231);
   border: 1px solid rgb(235, 215, 215);
   border-radius: 8px;
-  height: 70%;
+  height: 80%;
   width: 70%;
   padding: 20px;
 }
@@ -155,7 +161,74 @@ body {
   width: 80%;
 }
 
-.inputBox label{
+.inputBox label {
   font-size: 18px;
 }
 
+.buttonBack {
+  background: #ff0404;
+  padding: 14px 38px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.closeBtn {
+  background: #ff0404;
+  padding: 14px 38px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.optionsInputs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-box {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: start;
+  gap: 6px;
+  width: 20rem;
+  margin-top: 16px;
+}
+
+.option-box input {
+  padding: 14px 10px;
+  border-radius: 6px;
+  border-color: #ea2828;
+  width: 80%;
+}
+
+.text {
+  font-size: 12px;
+  width: 100%;
+}
+
+.SubmitButton {
+  background: #ff0404;
+  padding: 14px 38px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}

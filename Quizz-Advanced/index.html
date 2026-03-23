@@ -10,7 +10,7 @@
   <body>
     <div class="main">
       <div class="addQuestion" id="Add-Questions">
-        <button class="Addquestion" >Add question</button>
+        <button class="Addquestion">Add question</button>
       </div>
 
       <!-- welcome section  -->
@@ -21,6 +21,7 @@
       <!-- question section -->
       <div class="questionSection hide" id="Question-Section">
         <span class="header" id="Question-title"> </span>
+        <button class="buttonBack" id="Back-Buttton">Back</button>
 
         <ul class="optionList" id="option-list"></ul>
 
@@ -39,15 +40,44 @@
       <div class="QuestionAddContainer hide" id="Question-Container">
         <span>Add Questions</span>
 
+        <button class="closeBtn" id="close-btn">Close</button>
+
         <form action="" class="question-form">
           <div class="inputBox" id="input-box">
             <label for="Question">Question</label>
-            <input type="text" name="question" id="question" />
+            <input
+              type="text"
+              name="question"
+              id="question"
+              placeholder="Please Enter the Question"
+            />
           </div>
-          <div>
-            <label for="option">Options</label>
-            <input type="text" name="option" id="option1" />
+          <div class="inputBox" id="input-box">
+            Select the Number of options for the Question
+            <select name="options" id="OptionsList">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+            </select>
           </div>
+
+          <div class="optionsInputs" id="options-inputs">
+            <div class="option-box">
+              <label>Options 1</label>
+              <input type="text" placeholder="Enter Option 1 " />
+              <div class="flex">
+                <div class="text">Correct Answer</div>
+                <input type="radio" name="correctOption" />
+              </div>
+            </div>
+          </div>
+
+          <div class="errorMessage" id="error-message"></div>
+
+          <button class="SubmitButton" id="submit-button">Submit</button>
         </form>
       </div>
     </div>
