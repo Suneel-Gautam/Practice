@@ -15,13 +15,23 @@
       placeholder="Enter Your task here"
     />
     <button id="submitButton">Add Task</button>
+    <select name="taskFilter" id="taskFilter">
+      <option value="All">All</option>
+      <option value="Completed">Completed</option>
+      <option value="Incompleted">Incompleted</option>
+    </select>
+    <select name="dateFilter" id="DateFilter">
+      <option value="Newest">Newest First</option>
+      <option value="Oldest">Oldest First</option>
+    </select>
+
+    <div id="TotalTask"></div>
+    <div id="CompletedTaskCount"></div>
 
     <div id="TaskContainer">
       <ol id="task"></ol>
     </div>
 
-    <div class="error" id="error-id">
-
-    </div>
+    <div class="error" id="error-id"></div>
   </body>
 </html>
