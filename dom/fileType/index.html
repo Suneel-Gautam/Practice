@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      input {
+        display: none;
+      }
+
+      body {
+        display: flex;
+        justify-items: center;
+        align-items: center;
+      }
+      .button {
+        background-color: rgb(124, 193, 124);
+        padding: 10px;
+        border-radius: 2px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: rgb(153, 203, 153);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="file" id="file" />
+
+    <div class="button">Upload File</div>
+
+    <script>
+      const mainFile = document.querySelector("#file");
+      const button = document.querySelector("div");
+      button.addEventListener("click", function () {
+        mainFile.click();
+      });
+      mainFile.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          button.innerHTML = `${file.name}`;
+        }
+      });
+    </script>
+  </body>
+</html>
