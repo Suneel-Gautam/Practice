@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      form {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <input
+        type="text"
+        class="username"
+        id="username"
+        placeholder="username"
+      />
+      <input type="text" class="age" id="age" placeholder="age" />
+      <input type="text" class="email" id="email" placeholder="email" />
+      <input type="text" class="profile" id="profile" placeholder="profile" />
+      <input type="submit" />
+    </form>
+
+    <div class="card">
+      <h1></h1>
+      <p></p>
+      <p id="emailAddress"></p>
+      <img src="" alt="" />
+    </div>
+
+    <script>
+      const form = document.querySelector("form");
+      const input = document.querySelectorAll("input");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        document.querySelector("h1").innerHTML = input[0].value;
+        document.querySelector("p").innerHTML = input[1].value;
+        document.querySelector("#emailAddress").innerHTML = input[2].value;
+        document.querySelector("img").src = `${input[3].value}`;
+        console.log(
+          input[0].value,
+          input[1].value,
+          input[2].value,
+          input[3].value,
+        );
+      });
+    </script>
+  </body>
+</html>
