@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container" id="container-id">
+      <!-- Left Icons -->
+      <div class="side-icons">
+        <div id="addnote" class="icon">+</div>
+        <div class="icon">↑</div>
+        <div class="icon">↓</div>
+      </div>
+      <!-- Card -->
+
+      <div class="cards" id="cards">
+      </div>
+    </div>
+    </div>
+
+
+    <form action="" class="formContainer" id="form-container">
+      <span>New Call</span>
+
+      <div class="input">
+        <label for="imageurl">Image Url</label>
+        <input type="text" id="imageurl" placeholder="Enter Image Url Here" />
+      </div>
+      <div class="input">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter Full Name" />
+      </div>
+      <div class="input">
+        <label for="hometown">Home Town</label>
+        <input type="text" id="hometown" placeholder="Enter Home Town" />
+      </div>
+      <div class="input">
+        <label for="Purpose">Purpose</label>
+        <input
+          type="text"
+          id="Purpose"
+          placeholder="e.g. Quick Appoinment note"
+        />
+      </div>
+      <div class="input">
+        <label for="">Category</label>
+
+        <div class="radio">
+          <input
+            type="radio"
+            id="Emergency"
+            name="category"
+            value="Emergency"
+          />
+          <label for="Emergency">Emergency</label>
+        </div>
+        <div class="radio">
+          <input
+            type="radio"
+            id="Important"
+            name="category"
+            value="Important"
+          />
+          <label for="Important">Important</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="Urgent" name="category" value="Urgent" />
+          <label for="Urgent">Urgent</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="No rush" name="category" value="No rush" />
+          <label for="No rush">No rush</label>
+        </div>
+      </div>
+
+       <div class="errorMessage" id="error-message">
+      </div>
+     
+      <div class="buttons">
+        <button class="Createbutton" type="submit">Create Note</button>
+        <button type="button" class="Closebutton" id="closeForm">Close</button>
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
