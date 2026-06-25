@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+main {
+  width: 100%;
+}
+.TextEditorContainer {
+  box-sizing: border-box;
+  margin: 40px 30px;
+  background-color: white;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 2px solid rgb(8, 7, 7, 0.6);
+  outline: none;
+  font-size: 16px;
+  padding: 20px 0px 0px;
+}
+
+.headerSection {
+  padding: 0px 20px;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid rgb(8, 7, 7, 0.6);
+}
+.headerSection button {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.headerSection button:hover {
+  font-family: "Roboto Mono", monospace;
+  background-color: white;
+  color: rgb(61, 61, 237);
+  border: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#textArea {
+  padding: 20px 20px;
+  font-size: 20px;
+  height: 600;
+  max-width: 100%;
+  outline: none;
+}
+#textArea:empty::before {
+  content: attr(data-placeholder);
+  color: #777272;
+  pointer-events: none;
+}
+
+.header1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.header2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.normal{
+    font-size: 16px;
+}
+
+@media screen and (max-width: 300px) {
+  .headerSection {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgb(8, 7, 7, 0.6);
+  }
+}
