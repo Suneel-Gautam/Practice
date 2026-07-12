@@ -7,5 +7,4 @@ function evenNumber(n) {
     }
 }
 
-
 evenNumber(1)
