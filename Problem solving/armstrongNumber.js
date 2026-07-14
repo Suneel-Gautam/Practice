@@ -1,13 +1,12 @@
 function isArmstrongNumber(n) {
     let checkingNumber = 0
     let num = n
-    let forCount = n
+    let temp = n
     let count = 0
-    while (forCount > 0) {
+    while (temp > 0) {
         count++
-        forCount = Math.floor(forCount / 10)
+        temp = Math.floor(temp / 10)
     }
-
     while (n > 0) {
         checkingNumber = checkingNumber + (n % 10) ** count
         n = Math.floor(n / 10)
@@ -19,7 +18,5 @@ function isArmstrongNumber(n) {
     else {
         console.log(`${num} isn't ArmstrongNumber`)
     }
-
 }
-
 isArmstrongNumber(153)
