@@ -18,7 +18,6 @@ function findLargest(arr) {
             heightNumber = arr[i]
         }
 
-
     }
     console.log(heightNumber)
 }
