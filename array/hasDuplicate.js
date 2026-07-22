@@ -3,7 +3,6 @@
 
 
 function hasDuplicate(arr) {
-
     // in this question we need to use two loops 
     // becasue we need to check the number like we need to check in this way
     /// first to rest of other number second number to rest of other number and continous 
