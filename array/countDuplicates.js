@@ -34,7 +34,6 @@ function countDuplicates(arr) {
         }
     }
     console.log(count)
-
 }
 
 countDuplicates([1, 2, 3, 2, 4, 1])
